@@ -48,7 +48,7 @@ const createNav = () => {
     const sectionID = element.id;
     const sectionData = element.dataset.nav;
 
-    navElement += `<li class="navbar__menu " ><a class="menu__link " link="#${sectionID}">${sectionData}</a></li>`;
+    navElement += `<li class="navbar__menu " ><a class="menu__link " link="#${sectionID}" data-nav="${sectionID}">${sectionData}</a></li>`;
   });
   navList.innerHTML = navElement;
   console.log(navList);
