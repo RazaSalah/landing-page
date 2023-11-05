@@ -86,6 +86,41 @@ const activiteSection = () => {
 window.addEventListener("scroll", activiteSection);
 // Scroll to anchor ID using scrollTO event
 
+
+navList.addEventListener('click', (event) =>{
+  
+  event.preventDefault();
+ if(event.target.dataset.nav){
+
+  document.getElementById(`${event.target.dataset.nav}`).scrollIntoView({behavior:"smooth"})
+  // setTimeout(() => {
+  //   location.hash = `${event.target.dataset.nav}`;
+  // }, 200);
+ }
+})
+
+// const SectionScroll = () => {
+//   const links = document.querySelectorAll('a.menu__link ');
+//   console.log(links)
+//   links.forEach(element => {
+//     // console.log(element)
+//     element.addEventListener('click',(e) => {
+
+//       e.preventDefault();
+
+//       for( i=0 ; i<section ; i++){
+
+//         section[i].addEventListener("click",scrollTo(links));
+
+//       }
+    
+//     }
+//     )
+
+//   })
+// }
+
+// SectionScroll();
 /**
  * End Main Functions
  * Begin Events
