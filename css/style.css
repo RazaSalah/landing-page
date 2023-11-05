@@ -80,11 +80,11 @@ section {
   padding: 1em;
   font-weight: bold;
   text-decoration: none;
-  color: #000;
+  color: #3c393d;
 }
 
 .navbar__menu .menu__link:hover {
-  background: #333;
+  background: rgb(136, 203, 171);
   color: #fff;
   transition: ease 0.3s all;
 }
@@ -99,7 +99,7 @@ section {
 }
 
 /* Footer Styles */
-.page__footer {
+/* .page__footer {
   background: #000;
   padding: 3em;
   color: #fff;
@@ -107,6 +107,37 @@ section {
 
 .page__footer p {
   color: #fff;
+} */
+
+footer {
+  background: #fff;
+  text-align: center;
+  color: #3c393d;
+  padding: 2rem 0;
+}
+.social {
+  display: grid;
+  grid-template-columns: repeat(2, 50px);
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+.social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #3c393d;
+  margin: 0 0.8rem;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #3c393d;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+.social a:hover {
+  color: rgb(136, 203, 171);
+  background: #fff;
 }
 
 /* ---- Theme Rules ---- */
