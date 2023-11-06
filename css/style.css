@@ -24,7 +24,7 @@ body {
 /* Typeography General*/
 h1 {
   font-family: "Fira Sans", sans-serif;
-  font-size: 3em;
+  font-size: 2em;
   margin: 2em 1rem;
 }
 
@@ -65,6 +65,17 @@ section {
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
+.navbar__menu{
+  display: flex;
+  justify-content: space-between;
+  margin:2px;
+}
+.logo{
+  margin-left: 10px;
+  margin-top: 3px;
+  width: 83.07px;
+  height: 48.62;
+}
 .navbar__menu ul {
   padding-left: 0;
   margin: 0;
@@ -84,14 +95,18 @@ section {
 }
 
 .navbar__menu .menu__link:hover {
-  background: rgb(136, 203, 171);
+  background: linear-gradient(
+    0deg,
+    rgba(136, 203, 171, 1) 0%,
+    rgba(0, 13, 60, 1) 100%
+  );
   color: #fff;
   transition: ease 0.3s all;
 }
 
 /* Header Styles */
 .page__header {
-  background: #fff;
+  background:#ffffffba;
   position: fixed;
   top: 0;
   width: 100%;
@@ -110,10 +125,10 @@ section {
 } */
 
 footer {
-  background: #fff;
+  background: #ffffffba;
   text-align: center;
   color: #3c393d;
-  padding: 2rem 0;
+  padding: 0.5rem 0;
 }
 .social {
   display: grid;
@@ -242,6 +257,7 @@ section.your-active-class {
     rgba(0, 0, 0, 0.1) 0%,
     rgba(0, 0, 0, 0) 100%
   );
+  border-radius: 20px;
 }
 
 section.your-active-class .landing__container::before {
@@ -262,4 +278,37 @@ section.your-active-class .landing__container::after {
   to {
     transform: rotate(360deg) translate(-1em) rotate(-360deg);
   }
+}
+
+/* style for products cards */
+.content {
+  margin: 1.4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sectionItem {
+  margin: 2rem;
+  padding: 1.5rem;
+  /* width: 340px; */
+  width: 100%;
+  height: 100%;
+  background: rgba(215, 215, 215, 0.3);
+  border-radius: 5px;
+}
+
+.desc {
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.desc a {
+  font-size: 1rem;
+  color:rgba(0, 13, 60, 1);
+  text-decoration: none;
+}
+.button{
+  border-radius: 6px;
+  border: none;
 }
