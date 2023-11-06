@@ -1,156 +1,175 @@
-<!DOCTYPE >
+<!DOCTYPE>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Manipulating the DOM</title>
-    <!-- Load Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap"
-      rel="stylesheet"
-    />
-    <!-- load icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-      crossorigin="anonymous"
-    />
-    <!-- Load Styles -->
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <!-- HTML Follows BEM naming conventions 
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Manipulating the DOM</title>
+  <!-- Load Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet" />
+
+  <!-- load icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+
+  <!-- Load Styles -->
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- HTML Follows BEM naming conventions 
   IDs are only used for sections to connect menu achors to sections -->
-    <header class="page__header">
-      <nav class="navbar__menu">
-        <!-- Navigation starts as empty UL that will be populated with JS -->
-        <ul id="navbar__list"></ul>
-      </nav>
+  <header class="page__header">
+    <nav class="navbar__menu">
+      <img class="logo" src="./img/Logo.png" alt="logo">
+      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <ul id="navbar__list"></ul>
+    </nav>
+  </header>
+  <main>
+    <header class="main__hero">
+      <h1>R.S Smart Choice</h1>
+
     </header>
-    <main>
-      <header class="main__hero">
-        <h1>Landing Page</h1>
-      </header>
-      <!-- Each Section has an ID (used for the anchor) and 
+    <!-- Each Section has an ID (used for the anchor) and 
     a data attribute that will populate the li node.
     Adding more sections will automatically populate nav.
     The first section is set to active class by default -->
-      <section id="section1" data-nav="Section 1" class="your-active-class">
-        <div class="landing__container">
-          <h2>Section 1</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
-            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
-            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
-            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
-            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
-            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
-            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
-            vitae elit. Integer nec libero venenatis libero ultricies molestie
-            semper in tellus. Sed congue et odio sed euismod.
-          </p>
+    <section id="section1" data-nav="About" class="your-active-class">
+      <div class="landing__container">
+        <h2>About</h2>
+        <p>
+          We're a team of experienced designers, developers, and marketers, passionate about delivering exceptional
+          digital solutions.
+        </p>
 
-          <p>
-            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
-            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
-            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
-            elementum tortor mollis non.
-          </p>
-        </div>
-      </section>
-      <section id="section2" data-nav="Section 2">
-        <div class="landing__container">
-          <h2>Section 2</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
-            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
-            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
-            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
-            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
-            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
-            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
-            vitae elit. Integer nec libero venenatis libero ultricies molestie
-            semper in tellus. Sed congue et odio sed euismod.
-          </p>
-
-          <p>
-            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
-            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
-            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
-            elementum tortor mollis non.
-          </p>
-        </div>
-      </section>
-      <section id="section3" data-nav="Section 3">
-        <div class="landing__container">
-          <h2>Section 3</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
-            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
-            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
-            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
-            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
-            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
-            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
-            vitae elit. Integer nec libero venenatis libero ultricies molestie
-            semper in tellus. Sed congue et odio sed euismod.
-          </p>
-
-          <p>
-            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
-            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
-            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
-            elementum tortor mollis non.
-          </p>
-        </div>
-      </section>
-      <section id="section4" data-nav="Section 4">
-        <div class="landing__container">
-          <h2>Section 4</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
-            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
-            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
-            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
-            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
-            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
-            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
-            vitae elit. Integer nec libero venenatis libero ultricies molestie
-            semper in tellus. Sed congue et odio sed euismod.
-          </p>
-
-          <p>
-            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
-            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
-            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
-            elementum tortor mollis non.
-          </p>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="social">
-        <a href="https://www.linkedin.com/in/razan-alsubaie-55bba9204/"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-        <a href="https://github.com/RazaSalah"><i class="fab fa-github"></i></a>
+        <p>
+          We are passionate about helping businesses grow and succeed in the digital age. We take pride in our work and
+          strive to exceed your expectations every time.
+        </p>
       </div>
-      <em>R.S landing page project</em>
-    </footer>
-  </body>
-  <script src="./js/app.js"></script>
+    </section>
+    <section id="section2" data-nav="Products">
+      <div class="landing__container">
+        <h2>Products</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+          fermentum metus faucibus lectus pharetra dapibus. Suspendisse
+          potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
+          lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
+          convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
+          eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
+          nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
+          lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
+          tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
+          vitae elit. Integer nec libero venenatis libero ultricies molestie
+          semper in tellus. Sed congue et odio sed euismod.
+        </p>
+
+        <p>
+          Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
+          gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
+          Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
+          consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
+          elementum tortor mollis non.
+        </p>
+      </div>
+    </section>
+    <section id="section3" data-nav="Services">
+      <h2>Services</h2>
+      <!-- <div class="landing__container">
+        
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+          fermentum metus faucibus lectus pharetra dapibus. Suspendisse
+          potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
+          lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
+          convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
+          eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
+          nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
+          lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
+          tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
+          vitae elit. Integer nec libero venenatis libero ultricies molestie
+          semper in tellus. Sed congue et odio sed euismod.
+        </p> 
+
+       <p>
+          Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
+          gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
+          Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
+          consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
+          elementum tortor mollis non.
+        </p>
+      </div> -->
+
+      <div class="container">
+        <div class="content">
+          <div class="sectionItem">
+            <div class="desc">
+              <a href="">Design</a>
+              <p>
+                UX/UI design for your website or mobile application.
+              </p>
+              <button class="button">
+                <a href="">View</a>
+              </button>
+            </div>
+          </div>
+
+          <div class="sectionItem">
+            <div class="desc">
+              <a href="">Front-end development</a>
+              <p>
+                develop a responsive interface for your website.
+              </p>
+              <button class="button">
+                <a href="">View</a>
+              </button>
+            </div>
+          </div>
+
+          <div class="sectionItem">
+            <div class="desc">
+              <a href="">Mobile App development</a>
+              <p>
+                resolve the exist issue by developing a mobile application.
+              </p>
+              <button class="button">
+                <a href="">View</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="section4" data-nav="Contact us">
+      <div class="landing__container">
+        <h2>Contact us</h2>
+        <p>
+          Our team always ready to accept your challenge. To meet your goals is our main objective. Professional
+          service, 24/7 client support, teamwork, and collaboration.
+        </p>
+
+        <p>
+          Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
+          gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
+          Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
+          consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
+          elementum tortor mollis non.
+        </p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/razan-alsubaie-55bba9204/"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/RazaSalah"><i class="fab fa-github"></i></a>
+    </div>
+    <em>R.S Smart Choice</em>
+  </footer>
+</body>
+<script src="./js/app.js"></script>
+
 </html>
